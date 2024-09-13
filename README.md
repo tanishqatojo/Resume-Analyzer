@@ -4,7 +4,7 @@ AI Resume Analyzer is a web-based tool that helps users analyze their resumes an
 
 ## Features
 
-- Extracts text from PDF and DOCX resumes
+- Extracts text from PDF and resumes
 - Analyzes and matches keywords between resumes and job descriptions
 - Provides a similarity score between a resume and a job description
 - Suggests missing keywords that can improve resume relevance
