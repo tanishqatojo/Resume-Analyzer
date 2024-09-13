@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+</head>
+<body>
+    <h1>AI Resume Analyzer</h1>
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+        <label for="resume">Upload Resume (PDF):</label>
+        <input type="file" id="resume" name="resume" accept=".pdf" required><br><br>
+        
+        <label for="job">Job Description:</label><br>
+        <textarea id="job" name="job" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="years">Required Years of Experience:</label>
+        <input type="number" id="years" name="years" min="0" required><br><br>
+        
+        <label for="degree">Required Degree:</label>
+        <select id="degree" name="degree" required>
+            <option value="bachelor">Bachelor's</option>
+            <option value="master">Master's</option>
+            <option value="phd">PhD</option>
+            <option value="doctorate">Doctorate</option>
+        </select><br><br>
+        
+        <label for="skills">Required Skills (comma-separated):</label><br>
+        <input type="text" id="skills" name="skills" required><br><br>
+        
+        <input type="submit" value="Analyze">
+    </form>
+</body>
+</html>

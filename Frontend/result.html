@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+</head>
+<body>
+    <h1>Resume Analysis Result</h1>
+    <h2>Similarity Score: {{ "%.2f"|format(result.similarity_score * 100) }}%</h2>
+    
+    <h3>Resume Keywords:</h3>
+    <ul>
+    {% for keyword in result.resume_keywords %}
+        <li>{{ keyword }}</li>
+    {% endfor %}
+    </ul>
+
+    <h3>Job Keywords:</h3>
+    <ul>
+    {% for keyword in result.job_keywords %}
+        <li>{{ keyword }}</li>
+    {% endfor %}
+    </ul>
+
+    <h3>Missing Keywords:</h3>
+    <ul>
+    {% for keyword in result.missing_keywords %}
+        <li>{{ keyword }}</li>
+    {% endfor %}
+    </ul>
+
+    <a href="/">Analyze Another Resume</a>
+</body>
+</html>
